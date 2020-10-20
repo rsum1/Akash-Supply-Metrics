@@ -401,12 +401,8 @@
 
         // helper function to setup label settings for all series
         var setupSeriesLabels = function (series, name) {
-          series
-            .name(name)
-            .stroke("3 #fff 1")
-            .fill(function () {
-              return this.sourceColor + " 0.8"
-            })
+          series.name(name).stroke("3 #fff 1")
+
           series.hovered().stroke("3 #fff 1")
           series
             .hovered()
@@ -422,31 +418,31 @@
         var series
 
         // create first series with mapped data
-        series = chart.stepArea(aktPublicSale)
+        series = chart.stepArea(aktPublicSale).fill("#f99c1c")
         setupSeriesLabels(series, "Public Sale")
 
         // create second series with mapped data
-        series = chart.stepArea(aktInvestors)
+        series = chart.stepArea(aktInvestors).fill("#d94933")
         setupSeriesLabels(series, "Investors")
 
         // create third series with mapped data
-        series = chart.stepArea(aktTeamAdv)
+        series = chart.stepArea(aktTeamAdv).fill("#b72d26")
         setupSeriesLabels(series, "Team & Advisors")
 
         // create fourth series with mapped data
-        series = chart.stepArea(aktFoundation)
+        series = chart.stepArea(aktFoundation).fill("#801517")
         setupSeriesLabels(series, "Foundation")
 
         // create fifth series with mapped data
-        series = chart.stepArea(aktEcosystem)
+        series = chart.stepArea(aktEcosystem).fill("#eddf65")
         setupSeriesLabels(series, "Ecosystem")
 
         // create sixth series with mapped data
-        series = chart.stepArea(aktTestnets)
+        series = chart.stepArea(aktTestnets).fill("#929292")
         setupSeriesLabels(series, "Testnets")
 
         // create seventh series with mapped data
-        series = chart.stepArea(aktVendMark)
+        series = chart.stepArea(aktVendMark).fill("#313131")
         setupSeriesLabels(series, "Vendors & Marketing")
 
         // create eighth series with mapped data
@@ -466,6 +462,8 @@
         var formatter = "{%seriesName}: {%value}{groupsSeparator:\\,} AKT"
 
         chart.tooltip().format(formatter)
+
+        chart.yGrid().enabled(true);
 
         // set container id for the chart
         chart.container("container")
