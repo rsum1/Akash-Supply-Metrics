@@ -149,199 +149,199 @@
             "9/25/2021",
             1800000,
             17255394,
-            13500000,
+            11000000,
             13992351,
             3500000,
             1850000,
             1600000,
-            53497745,
+            50997745,
           ],
           [
             "10/25/2021",
             1800000,
             17255394,
-            13500000,
+            11000000,
             13992351,
             3500000,
             1850000,
             1600000,
-            53497745,
+            50997745,
           ],
           [
             "11/25/2021",
             1800000,
             17255394,
-            13500000,
+            11000000,
             13992351,
             3500000,
             1850000,
             1600000,
-            53497745,
+            50997745,
           ],
           [
             "12/25/2021",
             1800000,
             17255394,
-            13500000,
+            11000000,
             13992351,
             3500000,
             1850000,
             1600000,
-            53497745,
+            50997745,
           ],
           [
             "1/25/2022",
             1800000,
             17255394,
-            13500000,
+            11000000,
             13992351,
             3500000,
             1850000,
             1600000,
-            53497745,
+            50997745,
           ],
           [
             "2/25/2022",
             1800000,
             17255394,
-            13500000,
+            11000000,
             13992351,
             3500000,
             1850000,
             1600000,
-            53497745,
+            50997745,
           ],
           [
             "3/25/2022",
             1800000,
             25883091,
-            20250000,
+            17000000,
             16113527,
             5000000,
             2900000,
             2400000,
-            74346618,
+            71096618,
           ],
           [
             "4/25/2022",
             1800000,
             25883091,
-            20250000,
+            17000000,
             16113527,
             5000000,
             2900000,
             2400000,
-            74346618,
+            71096618,
           ],
           [
             "5/25/2022",
             1800000,
             25883091,
-            20250000,
+            17000000,
             16113527,
             5000000,
             2900000,
             2400000,
-            74346618,
+            71096618,
           ],
           [
             "6/25/2022",
             1800000,
             25883091,
-            20250000,
+            17000000,
             16113527,
             5000000,
             2900000,
             2400000,
-            74346618,
+            71096618,
           ],
           [
             "7/25/2022",
             1800000,
             25883091,
-            20250000,
+            17000000,
             16113527,
             5000000,
             2900000,
             2400000,
-            74346618,
+            71096618,
           ],
           [
             "8/25/2022",
             1800000,
             25883091,
-            20250000,
+            17000000,
             16113527,
             5000000,
             2900000,
             2400000,
-            74346618,
+            71096618,
           ],
           [
             "9/25/2022",
             1800000,
             34510788,
-            27000000,
+            23000000,
             18234702,
             6500000,
             3950000,
             3200000,
-            95195490,
+            91195490,
           ],
           [
             "10/25/2022",
             1800000,
             34510788,
-            27000000,
+            23000000,
             18234702,
             6500000,
             3950000,
             3200000,
-            95195490,
+            91195490,
           ],
           [
             "11/25/2022",
             1800000,
             34510788,
-            27000000,
+            23000000,
             18234702,
             6500000,
             3950000,
             3200000,
-            95195490,
+            91195490,
           ],
           [
             "12/25/2022",
             1800000,
             34510788,
-            27000000,
+            23000000,
             18234702,
             6500000,
             3950000,
             3200000,
-            95195490,
+            91195490,
           ],
           [
             "1/25/2023",
             1800000,
             34510788,
-            27000000,
+            23000000,
             18234702,
             6500000,
             3950000,
             3200000,
-            95195490,
+            91195490,
           ],
           [
             "2/25/2023",
             1800000,
             34510788,
-            27000000,
+            23000000,
             18234702,
             6500000,
             3950000,
             3200000,
-            95195490,
+            91195490,
           ],
           [
             "3/25/2023",
@@ -397,7 +397,7 @@
         chart.yScale().maximum(100000000)
 
         // set chart title text settings
-        chart.title("Akash (AKT) Supply Metrics")
+        chart.title("Genesis AKT Unlock Schedule")
 
         // helper function to setup label settings for all series
         var setupSeriesLabels = function (series, name) {
@@ -422,35 +422,35 @@
         var series
 
         // create first series with mapped data
-        series = chart.area(aktPublicSale)
+        series = chart.stepArea(aktPublicSale)
         setupSeriesLabels(series, "Public Sale")
 
         // create second series with mapped data
-        series = chart.area(aktInvestors)
+        series = chart.stepArea(aktInvestors)
         setupSeriesLabels(series, "Investors")
 
         // create third series with mapped data
-        series = chart.area(aktTeamAdv)
+        series = chart.stepArea(aktTeamAdv)
         setupSeriesLabels(series, "Team & Advisors")
 
         // create fourth series with mapped data
-        series = chart.area(aktFoundation)
+        series = chart.stepArea(aktFoundation)
         setupSeriesLabels(series, "Foundation")
 
-        // create fourth series with mapped data
-        series = chart.area(aktEcosystem)
+        // create fifth series with mapped data
+        series = chart.stepArea(aktEcosystem)
         setupSeriesLabels(series, "Ecosystem")
 
-        // create fourth series with mapped data
-        series = chart.area(aktTestnets)
+        // create sixth series with mapped data
+        series = chart.stepArea(aktTestnets)
         setupSeriesLabels(series, "Testnets")
 
-        // create fourth series with mapped data
-        series = chart.area(aktVendMark)
+        // create seventh series with mapped data
+        series = chart.stepArea(aktVendMark)
         setupSeriesLabels(series, "Vendors & Marketing")
 
-        // create fourth series with mapped data
-        //series = chart.area(aktGenCirc)
+        // create eighth series with mapped data
+        //series = chart.stepArea(aktGenCirc)
         //setupSeriesLabels(series, "Genesis Tokens in Circulation")
 
         // turn on legend
